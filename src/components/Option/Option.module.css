@@ -1,0 +1,14 @@
+.option {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: white;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: lightblue !important;
+}
