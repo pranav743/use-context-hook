@@ -1,10 +1,10 @@
 import type { Question, QuizProviderProps } from '@/types/QuizApp';
-import { sampleQuestions } from '@/utils/constants';
+import { sampleQuestions, shuffleArray } from '@/utils/constants';
 import { useState } from 'react';
 import { QuizContext } from '@/context/QuizContext';
 
 export const QuizProvider = ({ children }: QuizProviderProps) => {
-  const [questions] = useState<Question[]>(sampleQuestions);
+  const [questions, setQuestions] = useState<Question[]>(() => shuffleArray(sampleQuestions));
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -27,6 +27,7 @@ export const QuizProvider = ({ children }: QuizProviderProps) => {
     setCurrentQuestionIndex(0);
     setScore(0);
     setSelectedOption(null);
+    setQuestions(() => shuffleArray(sampleQuestions))
   };
 
   return (
