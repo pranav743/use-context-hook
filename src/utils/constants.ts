@@ -1,6 +1,8 @@
-import type { User } from "@/types/Types";
+import type { Student } from '@/types/Types';
 
-export const initialUsers: User[] = [
-  { id: 1, name: "Alice", role: "Admin" },
-  { id: 2, name: "Bob", role: "Editor" },
+export const students: Student[] = [
+  { id: 1, name: 'Alice', course: 'math' },
+  { id: 2, name: 'Bob', course: 'science' },
+  { id: 3, name: 'Charlie', course: 'math' },
+  { id: 4, name: 'Diana', course: 'science' },
 ];

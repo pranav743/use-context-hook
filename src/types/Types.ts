@@ -1,8 +1,7 @@
-type User = {
-	id: number;
-	name: string;
-	role: string;
+type Student = {
+  id: number;
+  name: string;
+  course: string;
 };
 
-
-export { type User };
+export { type Student };
