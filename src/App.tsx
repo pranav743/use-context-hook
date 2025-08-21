@@ -1,17 +1,12 @@
-import { QuizProvider } from './context/QuizContextProvider';
-import QuestionComponent from './components/Question/Question';
-import ProgressBar from './components/ProgressBar/ProgressBar';
+import React from 'react';
+import Video from './components/Video';
 
-function App() {
+const App = () => {
   return (
     <div>
-      <QuizProvider>
-        <h1>Quiz App</h1>
-        <ProgressBar />
-        <QuestionComponent />
-      </QuizProvider>
+      <Video />
     </div>
   );
-}
+};
 
 export default App;
