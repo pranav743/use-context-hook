@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../store/actions';
-import type { RootState } from '../store/types';
 
 const LoginPage: React.FC = () => {
   const dispatch = useAppDispatch();
