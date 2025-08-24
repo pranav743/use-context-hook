@@ -9,7 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc.cjs",
     "preview": "vite preview",
-    "clean": "rm -r dist"
+    "clean": "rm -r dist",
+    "server": "json-server --watch db.json --port 4000",
+    "start": "concurrently \"npm run server\" \"npm run dev\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
@@ -30,6 +32,7 @@
     "@typescript-eslint/eslint-plugin": "^8.39.1",
     "@typescript-eslint/parser": "^8.39.1",
     "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.0",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
