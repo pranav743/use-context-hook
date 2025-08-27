@@ -1,9 +1,16 @@
-function App() {
+import React from 'react';
+import { UserProvider } from './context/UserContext';
+import Home from './components/Home';
+import './App.css';
+
+const App: React.FC = () => {
   return (
-    <div>
-        <h1>Dashboard</h1>
-    </div>
+    <UserProvider>
+      <div className="app">
+        <Home />
+      </div>
+    </UserProvider>
   );
-}
+};
 
 export default App;
