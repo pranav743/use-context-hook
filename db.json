@@ -1,0 +1,22 @@
+{
+    "posts": [
+        { "id": "1", "title": "Introduction to React Hooks", "content": "Learn about useState, useEffect and custom hooks", "views": 150 },
+        { "id": "2", "title": "Building Custom Hooks", "content": "Create reusable logic with custom hooks", "views": 200 },
+        { "id": "3", "title": "Advanced React Patterns", "content": "Explore compound components and render props", "views": 320 },
+        { "id": "4", "title": "State Management in React", "content": "Using Redux Toolkit with React", "views": 180 }
+    ],
+    "users": [
+        { "id": "1", "name": "Rahul Sharma", "email": "rahulsharma123@gmail.com", "role": "Developer" },
+        { "id": "2", "name": "Pranav Patil", "email": "pranavpatil456@gmail.com", "role": "Designer" },
+        { "id": "3", "name": "Amit Kumar", "email": "amitkumar789@gmail.com", "role": "Manager" },
+        { "id": "4", "name": "Sneha Gupta", "email": "snehagupta101@gmail.com", "role": "QA Engineer" }
+    ],
+    "comments": [
+        { "id": "1", "text": "Great article on React Hooks!", "postId": "1" },
+        { "id": "2", "text": "Very helpful for beginners", "postId": "1" },
+        { "id": "3", "text": "Custom hooks are powerful", "postId": "2" }
+    ],
+    "profile": {
+        "name": "profile"
+    }
+}
