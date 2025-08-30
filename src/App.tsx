@@ -1,16 +1,22 @@
-import { QuizProvider } from './context/QuizContextProvider';
-import QuestionComponent from './components/Question/Question';
-import ProgressBar from './components/ProgressBar/ProgressBar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Navigation from './components/Navigation';
+import FeedbackForm from './components/FeedbackForm';
+import ImageSlideshow from './components/ImageSlideshow';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
-    <div>
-      <QuizProvider>
-        <h1>Quiz App</h1>
-        <ProgressBar />
-        <QuestionComponent />
-      </QuizProvider>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Navigation />} />
+          <Route path="/feedback" element={<FeedbackForm />} />
+          <Route path="/slideshow" element={<ImageSlideshow />} />
+          <Route path="/todos" element={<TodoList />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
